@@ -28,4 +28,12 @@ class ColourTest {
            Colour obj1 = new Colour(255, 255, 0, "12345");
         });
     }
+
+    @Test
+    public void checkIfEquals(){
+        Colour obj1 = new Colour(255, 255, 0, "Yellow");
+        Colour obj2 = new Colour(255, 255, 0, "Yellow");
+        assertTrue(obj1.equals(obj2), "Objects are equal");
+    }
+
 }
