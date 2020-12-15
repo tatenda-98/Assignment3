@@ -59,7 +59,7 @@ public class Colour {
             return true;
         }
 
-        if (that == null) {
+        if (!(that instanceof Colour)) {
             return false;
         }
 
@@ -74,5 +74,17 @@ public class Colour {
         }
 
         return true;
+    }
+
+    public Colour add(Object o) {
+        Colour that = (Colour) o;
+        if (this.colourModel.equals(that.colourModel)) {
+            float newR = (this.getR() + that.getR());
+            float newG = (this.getG() + that.getG());
+            float newB = (this.getB() + that.getB());
+            return new Colour(newR, newG, newB, this.colourModel);
+        } else {
+            throw new IllegalArgumentException("Colour models are not the same");
+        }
     }
 }
