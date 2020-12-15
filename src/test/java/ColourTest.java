@@ -17,8 +17,8 @@ class ColourTest {
     }
 
     @Test
-    public void stringColourModelCheck() {
-        Colour obj1 = new Colour(51, 255, 52, "Green");
-        assertTrue(obj1.colourModel, "Colour model has been successful");
+    public void colourModelCheck() {
+        Colour obj1 = new Colour(255, 255, 0, "Yellow");
+        assertTrue((obj1.colourModel == obj1.getModel()), "Object model has been created");
     }
 }

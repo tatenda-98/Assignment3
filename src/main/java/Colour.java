@@ -17,6 +17,7 @@ public class Colour {
         this.r = red;
         this.g = green;
         this.b = blue;
+
     }
 
     public final float getR() {
