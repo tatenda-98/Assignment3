@@ -15,4 +15,10 @@ class ColourTest {
            Colour obj1 = new Colour(-12,46,3);
         });
     }
+
+    @Test
+    public void stringColourModelCheck() {
+        Colour obj1 = new Colour(51, 255, 52, "Green");
+        assertTrue(obj1.colourModel, "Colour model has been successful");
+    }
 }
