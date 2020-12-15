@@ -21,4 +21,11 @@ class ColourTest {
         Colour obj1 = new Colour(255, 255, 0, "Yellow");
         assertTrue((obj1.colourModel == obj1.getModel()), "Object model has been created");
     }
+
+    @Test
+    public void checkValidityOfColourModel() {
+        assertThrows(IllegalArgumentException.class, ()-> {
+           Colour obj1 = new Colour(255, 255, 0, "12345");
+        });
+    }
 }
