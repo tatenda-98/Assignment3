@@ -50,4 +50,29 @@ public class Colour {
         }
         return true;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Colour that = (Colour) o;
+
+        if (that == this) {
+            return true;
+        }
+
+        if (that == null) {
+            return false;
+        }
+
+        if (that.r != this.r){
+            return false;
+        } else if (that.g != this.g) {
+            return false;
+        } else if (that.b != this.b) {
+            return false;
+        } else if (!(that.colourModel.equals(this.colourModel))) {
+            return false;
+        }
+
+        return true;
+    }
 }
