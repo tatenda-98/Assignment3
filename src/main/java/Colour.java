@@ -14,6 +14,8 @@ public class Colour {
             throw new IllegalArgumentException("Green value needs to be between 0 and 255.");
         } else if (blue <0 || blue > 255) {
             throw new IllegalArgumentException("Blue value needs to be between 0 and 255.");
+        } else if (!stringValidation(model)){
+            throw new IllegalArgumentException("Colour model can only consist of letters.");
         }
         this.r = red;
         this.g = green;
@@ -36,5 +38,16 @@ public class Colour {
 
     public final String getModel() {
         return this.colourModel;
+    }
+
+    public boolean stringValidation(String s) {
+        s = s.toLowerCase();
+        char[] charArray = s.toCharArray();
+        for (char ch : charArray) {
+            if (!(ch >= 'a' && ch <= 'z')) {
+                return false;
+            }
+        }
+        return true;
     }
 }
