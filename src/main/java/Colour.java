@@ -18,4 +18,16 @@ public class Colour {
         this.g = green;
         this.b = blue;
     }
+
+    public final float getR() {
+        return this.r;
+    }
+
+    public final float getG() {
+        return this.g;
+    }
+
+    public final float getB() {
+        return this.b;
+    }
 }
